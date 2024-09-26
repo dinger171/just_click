@@ -1,0 +1,169 @@
+#cursor {
+  width: 5em;
+  aspect-ratio: 1/1;
+  border-radius: 1em;
+}
+#cursor:active {
+  transform: scale(0.9);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8f0;
+}
+#circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 1em;
+}
+#container {
+  position: absolute;
+}
+html {
+  scroll-behavior: smooth;
+}
+#buyMenu {
+  width: 20rem;
+  height: 20rem;
+  background-color: bisque;
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  border-radius: 2em;
+  scroll-behavior: smooth;
+}
+#buyMenu div {
+  min-width: 20rem;
+  display: flex;
+  /* font-size: 10rem; */
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  border-radius: 2em;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+}
+#buyMenu div a {
+  transform: scale(2);
+  text-decoration: none;
+  position: relative;
+  left: 10%;
+}
+
+#buyMenu #card2 a {
+  transform: scale(2);
+  text-decoration: none;
+  position: relative;
+  left: -70%;
+}
+
+.Buybuttons {
+  position: relative;
+  width: 9em;
+  aspect-ratio: 2/1;
+  background-color: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
+  border-radius: 1vh;
+  color: #f5f5f5;
+  box-shadow: 0 9px #999;
+}
+.Buybuttons:hover {
+  background-color: #323030;
+}
+.Buybuttons:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(0.5vh);
+}
+
+.Prise {
+  font-weight: bolder;
+  font-size: larger;
+}
+.red, .green {
+  color: red;
+  font-size: larger;
+  font-weight: bolder;
+}
+.green {
+  color: green;
+}
+
+#devui {
+  position: absolute;
+  display: flex;
+  align-content: end;
+  height: 20em;
+  width: 25em;
+  border-radius: 0.1em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  background-color: black;
+  text-shadow: #2c2c2c 0.5em 0.5em 0.5em;
+  z-index: 1;
+}
+#devui::before {
+  content: "CONSOLE";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(-1em);
+  background-color: rgb(47, 47, 47);
+  height: 1em;
+  width: 25em;
+  border-radius: 0em;
+  z-index: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+
+  font-size: 1em;
+  font-weight: bolder;
+  text-shadow: #2c2c2c 0.5em 0.5em 0.5em;
+}
+#devui::after {
+  content: "X";
+  position: absolute;
+  top: -5%;
+  left: 97%;
+
+  height: 1em;
+
+  background-color: rgb(47, 47, 47);
+  border-radius: 0em;
+  z-index: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: bolder;
+  text-shadow: #2c2c2c 0.5em 0.5em 0.5em;
+
+  cursor: pointer;
+}
+
+
+#devui #devconsole {
+  height: 1em;
+  width: 44.4em;
+}
+
+#devconsoleOutputandHistory {
+  border-radius: 0em;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.6em;
+  font-weight: bold;
+  z-index: 1;
+}
+#devconsole {
+  background-color: rgb(33, 33, 33);
+  color: yellow;
+  position: relative;
+}

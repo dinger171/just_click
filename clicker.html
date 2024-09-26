@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicker Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="mainscript.js"></script>
+</head>
+<body>
+
+  <div id="container">
+    <h1>Clicker Game</h1>
+    <button id="devconsoleUI" onclick="devuiOpener()">Open CONSOLE</button>
+    <div id="devui" style="display: none" class="draggable" >
+      <p id="devconsoleOutputandHistory" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></p>
+      
+      <input type="text" placeholder="develop" id="devconsole">
+    </div>
+    <p id="events"></p>
+    <p id="eventtime"></p>
+    <p id="score"></p>
+    <p id="currentCursor"></p>
+    <p id="multiplierValue"></p>
+    <p id="clicksperclick"></p>
+    <p id="supermultiplierValue"></p>
+    <div id="buyMenu">
+      <div id="card1">
+        <button id="multiplierPlus" class="Buybuttons">Buy Multiplier</button><br>
+        <a href="#card2" class="rightarrow">&rightarrow;</a>
+        <p id="MultiplierPrise" class="Prise">Price</p>
+      </div>
+      
+      <div id="card2">
+        <button id="supermultiplierPlus" class="Buybuttons">Buy Super Multiplier</button><br>
+        <a href="#card1" class="leftarrow">&LeftArrow;</a>
+        <a href="#card3" class="rightarrow">&rightarrow;</a>
+        <p id="SuperMultiplierPrise" class="Prise">Price</p>
+      </div>
+
+      <div id="card3">
+        <button id="AutoclicksPlus" class="Buybuttons">Buy Autoclicking</button><br>
+        <a href="#card2" class="leftarrow">&LeftArrow;</a>
+        <p id="Autoclicksprise" class="Prise">Price</p>
+      </div>
+    </div>
+    <div id="circle">
+      <img src="img/start-cursor.jpg" alt="clickimg" id="cursor" draggable="false">
+    </div>
+  </div>
+  
+</body>
+</html>
